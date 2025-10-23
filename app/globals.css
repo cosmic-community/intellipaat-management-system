@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 30 58 138;
+    --primary-foreground: 255 255 255;
+    --secondary: 243 244 246;
+    --secondary-foreground: 31 41 55;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6;
+  }
+  
+  .btn-primary {
+    @apply bg-blue-800 text-white px-4 py-2 rounded-lg hover:bg-blue-900 transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors;
+  }
+  
+  .input-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800;
+  }
+  
+  .calendar-day {
+    @apply aspect-square flex items-center justify-center rounded-lg cursor-pointer transition-colors;
+  }
+  
+  .calendar-day-present {
+    @apply bg-green-100 text-green-800 hover:bg-green-200;
+  }
+  
+  .calendar-day-absent {
+    @apply bg-red-100 text-red-800 hover:bg-red-200;
+  }
+  
+  .calendar-day-today {
+    @apply ring-2 ring-blue-800;
+  }
+  
+  .calendar-day-default {
+    @apply hover:bg-gray-100;
+  }
+}
